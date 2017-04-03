@@ -34,11 +34,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Bdy Parser Middleware
 app.use(bodyParser.json());
 
-app.use('./users', users);
+//passport Middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+require('./config/passport')(passport);
+
+app.use('/users', users);
 
 //Index Route
 app.get('/', (req, res) => {
-    res.send();
+    res.send('123');
 })
 
 //Start Serve 
