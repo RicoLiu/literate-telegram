@@ -81311,7 +81311,7 @@ var AuthConfigConsts = (function () {
     }
     return AuthConfigConsts;
 }());
-AuthConfigConsts.DEFAULT_TOKEN_NAME = 'id_token';
+AuthConfigConsts.DEFAULT_TOKEN_NAME = 'token';
 AuthConfigConsts.DEFAULT_HEADER_NAME = 'Authorization';
 AuthConfigConsts.HEADER_PREFIX_BEARER = 'Bearer ';
 exports.AuthConfigConsts = AuthConfigConsts;
