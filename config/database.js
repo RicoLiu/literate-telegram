@@ -1,4 +1,4 @@
 module.exports = {
-    database: "mongodb://localhost:27017/meanauth",
+    database: "mongodb://rico:rico@ds145039.mlab.com:45039/mean-stack",
     secret: "123456"
 }
