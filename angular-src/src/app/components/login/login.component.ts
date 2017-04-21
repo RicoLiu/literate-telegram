@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private router: Router,
     private flashMessage: FlashMessagesService
-    ) { }
+  ) { }
 
   ngOnInit() {
   }
@@ -31,10 +31,10 @@ export class LoginComponent implements OnInit {
       console.log(data)
       if (data.success) {
         this.authService.storeUserData(data.token, data.user);
-        this.flashMessage.show('success login', {cssClass: 'alert-success', timeout: 2000});
+        this.flashMessage.show('success login', { cssClass: 'alert-success', timeout: 2000 });
         this.router.navigate(['dashboard']);
       } else {
-        this.flashMessage.show(data.msg, {cssClass: 'alert-danger', timeout: 2000});
+        this.flashMessage.show(data.msg, { cssClass: 'alert-danger', timeout: 2000 });
         this.router.navigate(['login']);
       }
 
