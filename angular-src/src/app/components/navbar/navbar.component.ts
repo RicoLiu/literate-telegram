@@ -11,7 +11,7 @@ import { AuthService } from '../../services/auth.service'
 export class NavbarComponent implements OnInit {
 
   constructor(
-    private authService: AuthService,
+    public authService: AuthService,
     private router: Router,
     private flashMessage: FlashMessagesService
   ) { }
@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
   onLogoutClick() {
     this.authService.logout();
     this.flashMessage.show('logout success', { cssClass: 'alert-success', timeout: 2000 });
-    this.router.navigateByUrl('login');
+    this.router.navigateByUrl('login');    
     return false;
   }
 
