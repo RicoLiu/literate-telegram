@@ -7,8 +7,8 @@ describe('angular-src App', () => {
     page = new AngularSrcPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display message saying MEAN Authentication App', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('MEAN Authentication App');
   });
 });

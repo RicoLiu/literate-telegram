@@ -1,0 +1,25 @@
+
+sudo: required
+dist: trusty
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+
+language: node_js
+node_js: 
+  - '6.10.3'
+
+before_install: 
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - npm install -g @angular/cli@latest
+
+script: 
+  - cd angular-src && ng e2e
+
+cache:
+  directories:
+    - node_modules
