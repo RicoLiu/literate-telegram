@@ -18,7 +18,8 @@ before_install:
   - npm install -g @angular/cli@latest
 
 script: 
-  - cd angular-src && ng e2e
+  - cd angular-src
+  - ng e2e
 
 cache:
   directories:
