@@ -16,6 +16,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "cd angular-src && ng e2e",
+    "build": "cd angular-src && ng build",
     "start": "node app"
   },
   "repository": {
