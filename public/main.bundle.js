@@ -411,14 +411,14 @@ var _a;
 /***/ 170:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n  <h1>MEAN 练习</h1>\n  <p class=\"lead\"></p>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-md-4\">\n    <h3>简介一</h3>\n    <p>随便说说随便说说随便说说</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>简介二</h3>\n    <p>随便说说随便说说随便说说</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>简介三</h3>\n    <p>随便说说随便说说随便说说</p>\n  </div>\n</div>"
+module.exports = "<div class=\"jumbotron text-center\">\n  <h1>MEAN</h1>\n  <p class=\"lead\"></p>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-md-4\">\n    <h3>简介一</h3>\n    <p>随便说说随便说说随便说说</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>简介二</h3>\n    <p>随便说说随便说说随便说说</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>简介三</h3>\n    <p>随便说说随便说说随便说说</p>\n  </div>\n</div>"
 
 /***/ }),
 
 /***/ 171:
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Login</h2>\n<form (submit)=\"onLoginSubmit()\">\n  <div class=\"form-group\">\n    <label>Username</label>\n    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"username\" name=\"username\">\n  </div>\n  <div class=\"form-group\">\n    <label>Password</label>\n    <input type=\"password\" class=\"form-control\" [(ngModel)]=\"password\" name=\"password\">\n  </div>\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Login\">\n</form>"
+module.exports = "<div class=\"auth-block\">\n    <form class=\"form-horizontal\" (submit)=\"onLoginSubmit()\">\n      <div class=\"form-group\">\n        <div class=\"col-sm-offset-4 col-sm-4\">\n          <input class=\"form-control\" [(ngModel)]=\"username\" name=\"username\" placeholder=\"用户名\">\n        </div>\n      </div>\n      <div class=\"form-group\">\n        <div class=\"col-sm-offset-4 col-sm-4\">\n          <input type=\"password\" class=\"form-control\" [(ngModel)]=\"password\" name=\"password\" placeholder=\"密码\">\n        </div>\n      </div>\n      <div class=\"form-group\">\n        <div class=\"col-sm-offset-4 col-sm-2\">\n          <input type=\"checkbox\">\n          <span>记住密码</span>\n        </div>\n        <div class=\"col-sm-2\">\n          <a style=\"float: right\">\n            <span>忘记密码？</span>\n          </a>\n        </div>\n      </div>\n      <div class=\"form-group\">\n        <div class=\"col-sm-offset-4 col-sm-4\">\n          <button type=\"submit\" class=\"btn btn-primary\" style=\"width: 100%\">登录</button>\n        </div>\n      </div>\n      <div class=\"form-group\">\n        <div class=\"col-sm-offset-4 col-sm-4\">\n          <a [routerLink]=\"['/register']\">\n            <span>还没有账号？快速注册</span>\n          </a>\n        </div>\n      </div>\n    </form>\n  </div>"
 
 /***/ }),
 
