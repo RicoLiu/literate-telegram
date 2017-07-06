@@ -2,7 +2,10 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
-    "baseUrl": "src",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["node_modules/*", "*"]
+    },
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
