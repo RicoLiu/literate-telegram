@@ -1,4 +1,5 @@
 import { AngularSrcPage } from './app.po';
+import 'mocha' ;
 
 describe('angular-src App', () => {
   let page: AngularSrcPage;
