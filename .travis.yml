@@ -23,3 +23,7 @@ script:
   - cd angular-src
   - npm install
   - ng e2e
+
+cache:
+  directories:
+    - node_modules
