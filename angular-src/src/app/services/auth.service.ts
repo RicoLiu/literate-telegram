@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { tokenNotExpired } from 'angular2-jwt';
 
@@ -10,21 +11,21 @@ export class AuthService {
 
   constructor(private http: Http) { }
 
-  registerUser(user) {
+  registerUser(user: any):Observable<any> {
     let headers = new Headers();
     headers.append('Content-type', 'application/json');
     return this.http.post('users/register', user, { headers: headers })
       .map(res => res.json());
   }
 
-  authenticateUser(user) {
+  authenticateUser(user: any):Observable<any> {
     let headers = new Headers();
     headers.append('Content-type', 'application/json');
     return this.http.post('users/authenticate', user, { headers: headers })
       .map(res => res.json());
   }
 
-  getProfile() {
+  getProfile():Observable<any> {
     let headers = new Headers();
     this.loadToken();
     headers.append('Authorization', this.authToken);

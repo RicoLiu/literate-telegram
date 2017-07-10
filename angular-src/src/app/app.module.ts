@@ -18,6 +18,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 
 import { ValidateService } from './services/validate.service';
 import { AuthService } from './services/auth.service';
+import { RetrieveComponent } from './components/retrieve/retrieve.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -35,7 +36,8 @@ const appRoutes: Routes = [
     RegisterComponent,
     HomeComponent,
     DashboardComponent,
-    ProfileComponent
+    ProfileComponent,
+    RetrieveComponent
   ],
   imports: [
     BrowserModule,
