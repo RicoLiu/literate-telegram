@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "\"MEAN-Stack\"",
   "main": "app.js",
+  "engines": {
+    "node": "6.11.1"
+  },
   "dependencies": {
     "express": "*",
     "mongoose": "*",
