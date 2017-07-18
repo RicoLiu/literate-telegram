@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FlashMessagesService } from 'angular2-flash-messages'
+import { FlashMessagesService } from 'angular2-flash-messages';
+import { Router } from '@angular/router';
 
 import { ValidateService } from '../../services/validate.service';
+import { AuthService } from '../../services/auth.service';
 
 
 @Component({
@@ -18,7 +20,9 @@ export class RetrieveComponent implements OnInit {
 
   constructor(
     private validateService: ValidateService,
-    private flashMessagesService: FlashMessagesService
+    private flashMessagesService: FlashMessagesService,
+    private authService: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -43,6 +47,22 @@ export class RetrieveComponent implements OnInit {
       this.flashMessagesService.show('worng email', { cssClass: 'alert-danger', timeout: 2000 });
       return false;
     }
+
+    if (!this.validateService.validatePassword(user)) {
+      this.flashMessagesService.show('两次输入的密码不一致', { cssClass: 'alert-danger', timeout: 2000 });
+      return false;
+    }
+
+    //retrieve password
+    this.authService.retrievePassword(user).subscribe(data => {
+      if (data.success) {
+        this.flashMessagesService.show('重置密码成功', { cssClass: 'alert-success', timeout: 2000 });
+        this.router.navigate(['/login']);
+      } else {
+        this.flashMessagesService.show('重置密码失败', { cssClass: 'alert-danger', timeout: 2000 });
+        this.router.navigate(['/register']);
+      }
+    })
   }
 
 }

@@ -32,6 +32,14 @@ router.post('/register', (req, res, next) => {
     })
 });
 
+//Retrieve password
+router.post('/retrieve', (req, res, next) => {
+    console.log('retrieve coming');
+
+});
+
+//Delete
+
 //Authenticate
 router.post('/authenticate', (req, res, next) => {
     const username = req.body.username;

@@ -33,6 +33,13 @@ export class AuthService {
     return this.http.get('users/profile', { headers: headers })
       .map(res => res.json());
   }
+  
+  retrievePassword(user: any):Observable<any> {
+    let headers = new Headers();
+    headers.append('Content-type', 'application.json');
+    return this.http.post('user/retrieve', user, { headers: headers })
+      .map(res => res.json());
+  }
 
   storeUserData(token, user) {
     localStorage.setItem('id_token', token);
