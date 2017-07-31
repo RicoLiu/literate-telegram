@@ -7,20 +7,20 @@
     "node": "6.11.1"
   },
   "dependencies": {
-    "express": "*",
-    "mongoose": "*",
-    "bcryptjs": "*",
-    "cors": "*",
-    "jsonwebtoken": "*",
-    "body-parser": "*",
-    "passport": "*",
-    "passport-jwt": "*"
+    "express": "^4.15.3",
+    "mongoose": "^4.11.5",
+    "bcryptjs": "^2.4.3",  
+    "cors": "^2.8.4",
+    "jsonwebtoken": "^7.4.1",
+    "body-parser": "^1.17.2",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1"
   },
   "devDependencies": {},
   "scripts": {
     "test": "cd angular-src && ng e2e",
-    "build": "cd angular-src && ng build",
-    "start": "node app"
+    "build": "cd angular-src && ng build --prod --env=prod",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
