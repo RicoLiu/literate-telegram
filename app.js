@@ -33,7 +33,7 @@ app.use(cors());
 //Static Folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-//Bdy Parser Middleware
+//Body Parser Middleware
 app.use(bodyParser.json());
 
 //passport Middleware
